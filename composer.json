@@ -1,0 +1,27 @@
+{
+	"name" : "mops1k/minecraftserverstatus",
+	"type" : "library",
+	"description" : "Minecraft Server Status Query, written in PHP, with online players, motd, favicon and more server related informations without plugins and enable-query.",
+	"keywords" : [
+		"minecraft",
+		"server",
+		"status"
+	],
+	"license" : "BSD",
+	"autoload" : {
+		"psr-4" : {
+			"MinecraftServerStatus\\" : "src/",
+			"MinecraftServerStatus\\Packets\\" : "src/Packets/"
+		}
+	},
+	"authors" : [
+		{
+			"name" : "mops1k",
+			"email" : "bednyj.mops@gmail.com"
+		},
+		{
+			"name" : "Julian Spravil",
+			"email" : "julian.spr@t-online.de"
+		}
+	]
+}

@@ -15,7 +15,11 @@ use MinecraftServerStatus\MinecraftServerStatus;
 
 require '../vendor/autoload.php';
 
-$status = new MinecraftServerStatus('127.0.0.1', 25565);
+$status = new MinecraftServerStatus();
+$status
+    ->setHost('localhost')
+    ->setPort(25565)
+;
 
 if (!$status->query()) {
     echo "The Server is offline!";

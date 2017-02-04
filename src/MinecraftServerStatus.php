@@ -9,21 +9,17 @@ class MinecraftServerStatus
     private $data;
 
     /** @var string */
-    private $host;
+    private $host = '127.0.0.1';
 
     /** @var integer */
-    private $port;
+    private $port = 25565;
 
     /**
      * MinecraftServerStatus constructor.
-     * @param string $host
-     * @param int $port
      */
-    public function __construct($host = '127.0.0.1', $port = 25565)
+    public function __construct()
     {
         $this->data = new MinecraftServerData;
-        $this->host = $host;
-        $this->port = $port;
     }
 
     /**
@@ -123,6 +119,27 @@ class MinecraftServerStatus
         }
         return $a;
     }
+
+    /**
+     * @param string $host
+     * @return MinecraftServerStatus
+     */
+    public function setHost($host)
+    {
+        $this->host = $host;
+        return $this;
+    }
+
+    /**
+     * @param int $port
+     * @return MinecraftServerStatus
+     */
+    public function setPort($port)
+    {
+        $this->port = $port;
+        return $this;
+    }
+
 
     /**
      * @return MinecraftServerData
